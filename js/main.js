@@ -48,6 +48,13 @@ const team = [
   ];
 
   //stampo su console le informazioni di nome, ruolo e la stringa della foto
-  for(let i = 0; i < team.length; i++){
+  for( let i in team){
     console.log(team[i]);
+
+    //stampo le stesse informazioni su DOM sottoforma di stringhe
+    document.getElementById('card').innerHTML += 
+    `<li>${team[i].name} / ${team[i].role} / ${team[i].image}</li>`
   }
+
+
+  
