@@ -47,14 +47,38 @@ const team = [
     },
   ];
 
+   // BONUS 1:
+  // trasformare la stringa foto in una immagine effettiva
+  let percorsoImg = './img/';
+
   //stampo su console le informazioni di nome, ruolo e la stringa della foto
   for( let i in team){
     console.log(team[i]);
 
     //stampo le stesse informazioni su DOM sottoforma di stringhe
-    document.getElementById('card').innerHTML += 
-    `<li>${team[i].name} / ${team[i].role} / ${team[i].image}</li>`
+    
+    // document.getElementById('card').innerHTML += 
+    // `<li>${team[i].name} / ${team[i].role} / ${team[i].image}</li>`
+
+   // BONUS 2:
+  // organizzare i singoli membri in card/schede
+
+    document.getElementById('card').innerHTML +=
+    `
+    <div class="card" style="width: 18rem;">
+      <img src="${percorsoImg + team[i].image}" class="card-img-top" alt="...">
+      <div class="card-body">
+       <h5 class="card-title">${team[i].name}</h5>
+       <p class="card-text">${team[i].professione}</p>
+       <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    `
   }
 
+ 
+
+  
+ 
 
   
