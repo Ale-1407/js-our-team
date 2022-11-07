@@ -56,7 +56,7 @@ const team = [
     console.log(team[i]);
 
     //stampo le stesse informazioni su DOM sottoforma di stringhe
-    
+
     // document.getElementById('card').innerHTML += 
     // `<li>${team[i].name} / ${team[i].role} / ${team[i].image}</li>`
 
@@ -69,7 +69,7 @@ const team = [
       <img src="${percorsoImg + team[i].image}" class="card-img-top" alt="...">
       <div class="card-body">
        <h5 class="card-title">${team[i].name}</h5>
-       <p class="card-text">${team[i].professione}</p>
+       <p class="card-text">${team[i].role}</p>
        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
